@@ -1,5 +1,13 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="h-full">
-    @Body
+<div class="page h-full">
+    <aside class="sidebar">
+        <NavMenu />
+    </aside>
+
+    <main class="main-content">
+        <article class="content-shell">
+            @Body
+        </article>
+    </main>
 </div>
