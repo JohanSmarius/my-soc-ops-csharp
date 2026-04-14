@@ -1,22 +1,23 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 cabin-fade-up">
-    <div class="text-center max-w-sm">
-        <p class="cabin-kicker mb-2">Welcome to the Lodge</p>
-        <h1 class="text-4xl font-bold text-gray-900 mb-2 cabin-title">Soc Ops</h1>
-        <p class="text-lg text-cabin-muted mb-8">Social Bingo</p>
+<div class="hero-root">
+    <div class="hero-scenery" aria-hidden="true">
+        <div class="hero-treeline"></div>
+        <div class="hero-mist"></div>
+    </div>
 
-        <div class="cabin-card p-6 mb-8">
-            <h2 class="font-semibold text-cabin-ink mb-3">How to play</h2>
-            <ul class="text-left text-cabin-muted text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
-        </div>
-
+    <div class="hero-content">
+        <div class="hero-ornament hero-child" aria-hidden="true">◆ ◆ ◆</div>
+        <p class="hero-kicker hero-child">Welcome to the Lodge</p>
+        <h1 class="hero-title hero-child">Soc&nbsp;Ops</h1>
+        <p class="hero-sub hero-child">Social Bingo &middot; Find&nbsp;Your&nbsp;People</p>
+        <ul class="hero-rules hero-child" aria-label="How to play">
+            <li>Find people who match the squares</li>
+            <li>Tap a square when you find a match</li>
+            <li>Get five in a row to win</li>
+        </ul>
         <button
             @onclick="OnStart"
-            class="cabin-cta py-4 px-8 text-lg">
-            Start Game
+            class="hero-cta hero-child">
+            Enter the Lodge
         </button>
     </div>
 </div>
