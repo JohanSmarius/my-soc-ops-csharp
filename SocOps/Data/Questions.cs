@@ -11,13 +11,13 @@ public static class Questions
         "prefers tabs over spaces",
         "has a favorite VS Code theme",
         "uses vim keybindings",
-        "knows what COBOL is",
+        "has worked with COBOL",
         "has contributed to open source",
 
         // Dev Culture
         "fixes bugs with print statements",
         "has rubber duck debugged",
-        "writes tests BEFORE code",
+        "writes tests before code",
         "has stayed up coding past 2am",
         "has a side project graveyard",
         "reads tech blogs weekly",
