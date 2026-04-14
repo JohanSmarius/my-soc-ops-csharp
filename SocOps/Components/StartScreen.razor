@@ -1,24 +1,43 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 cabin-fade-up">
-    <div class="text-center max-w-sm">
-        <p class="cabin-kicker mb-2">Welcome to the Lodge</p>
-        <h1 class="text-4xl font-bold text-gray-900 mb-2 cabin-title">Soc Ops</h1>
-        <p class="text-lg text-cabin-muted mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6">
 
-        <div class="cabin-card p-6 mb-8">
-            <h2 class="font-semibold text-cabin-ink mb-3">How to play</h2>
-            <ul class="text-left text-cabin-muted text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
-        </div>
+    <div class="start-badge start-reveal-1" aria-hidden="true">
+        <span>🧭</span>
+    </div>
 
+    <div class="text-center max-w-sm start-reveal-2">
+        <p class="cabin-kicker mb-1">Social Expedition</p>
+        <h1 class="start-wordmark cabin-title mb-3">Soc Ops</h1>
+        <div class="start-divider" aria-hidden="true">✦</div>
+        <p class="text-lg text-cabin-muted mt-3 mb-6">Field Edition · Bingo</p>
+    </div>
+
+    <div class="cabin-card p-6 mb-6 max-w-sm w-full start-reveal-3">
+        <p class="cabin-kicker mb-3">Mission objectives</p>
+        <ol class="start-objectives text-cabin-muted text-sm">
+            <li>
+                <span class="start-obj-num" aria-hidden="true">01</span>
+                <span>Scout the room for people matching the cards</span>
+            </li>
+            <li>
+                <span class="start-obj-num" aria-hidden="true">02</span>
+                <span>Tap a square when you find a match</span>
+            </li>
+            <li>
+                <span class="start-obj-num" aria-hidden="true">03</span>
+                <span>Get 5 in a row to call Bingo and win!</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="w-full max-w-sm start-reveal-4">
         <button
             @onclick="OnStart"
-            class="cabin-cta py-4 px-8 text-lg">
-            Start Game
+            class="start-cta cabin-cta py-4 px-8 text-lg">
+            Begin the Expedition
+            <span class="start-cta-arrow" aria-hidden="true">→</span>
         </button>
     </div>
+
 </div>
 
 @code {
