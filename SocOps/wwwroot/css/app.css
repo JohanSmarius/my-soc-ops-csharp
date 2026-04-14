@@ -388,6 +388,249 @@ button:disabled {
     }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   HERO LANDING — Start Screen (Design Variation 1)
+   Cinematic cabin hero: layered atmosphere + staggered reveal.
+══════════════════════════════════════════════════════════════ */
+
+.hero-root {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 3rem 1.5rem 8rem;
+    background:
+        radial-gradient(ellipse 90% 55% at 50% -5%,
+            rgba(255, 220, 140, 0.55) 0%, transparent 62%),
+        radial-gradient(ellipse 110% 35% at 50% 58%,
+            rgba(100, 68, 42, 0.22) 0%, transparent 70%),
+        linear-gradient(170deg,
+            #f0d5a0 0%,
+            #e0bf88 18%,
+            #c99a72 36%,
+            #896055 52%,
+            #4b7059 65%,
+            #2e5840 80%,
+            #1d3e2c 100%);
+}
+
+.hero-scenery {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-treeline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42%;
+    background: linear-gradient(to top, #111e16, #1b3224, #1f3b2a);
+    clip-path: polygon(
+        0% 100%, 0% 60%,
+        2.5% 35%, 5% 60%,
+        7.5% 15%, 10% 60%,
+        12% 42%, 14% 60%,
+        16% 22%, 19% 60%,
+        21% 38%, 23% 60%,
+        26% 10%, 29% 60%,
+        31% 44%, 33% 60%,
+        36% 28%, 39% 60%,
+        41% 48%, 44% 60%,
+        46% 8%, 49% 60%,
+        52% 32%, 55% 60%,
+        57% 18%, 60% 60%,
+        62% 44%, 65% 60%,
+        67% 24%, 70% 60%,
+        72% 40%, 74% 60%,
+        77% 12%, 80% 60%,
+        82% 36%, 84% 60%,
+        87% 26%, 90% 60%,
+        92% 46%, 95% 60%,
+        97% 18%, 100% 60%,
+        100% 100%
+    );
+}
+
+.hero-mist {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    height: 14%;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(210, 185, 155, 0.18),
+        rgba(210, 185, 155, 0.12),
+        transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.hero-child {
+    animation: hero-rise var(--cabin-enter) both;
+}
+
+.hero-content > .hero-child:nth-child(1) { animation-delay: 0ms; }
+.hero-content > .hero-child:nth-child(2) { animation-delay: 120ms; }
+.hero-content > .hero-child:nth-child(3) { animation-delay: 260ms; }
+.hero-content > .hero-child:nth-child(4) { animation-delay: 400ms; }
+.hero-content > .hero-child:nth-child(5) { animation-delay: 540ms; }
+.hero-content > .hero-child:nth-child(6) { animation-delay: 680ms; }
+
+@keyframes hero-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--cabin-gold-500);
+    font-size: 0.5rem;
+    letter-spacing: 0.5em;
+}
+
+.hero-ornament::before,
+.hero-ornament::after {
+    content: '';
+    display: block;
+    width: 3.5rem;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(190, 125, 47, 0.7), transparent);
+}
+
+.hero-kicker {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cabin-gold-200);
+    margin-bottom: 0.65rem;
+    opacity: 0.92;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 11vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: var(--cabin-cream-100);
+    text-shadow:
+        0 2px 12px rgba(22, 14, 8, 0.45),
+        0 6px 40px rgba(22, 14, 8, 0.22);
+    margin-bottom: 0.8rem;
+}
+
+.hero-sub {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--cabin-cream-200);
+    letter-spacing: 0.015em;
+    margin-bottom: 2rem;
+    opacity: 0.88;
+}
+
+.hero-rules {
+    list-style: none;
+    padding: 0.9rem 1.25rem;
+    margin: 0 0 2.25rem;
+    width: 100%;
+    background: rgba(20, 13, 8, 0.3);
+    border: 1px solid rgba(245, 224, 178, 0.15);
+    border-radius: var(--cabin-radius-md);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    text-align: left;
+}
+
+.hero-rules li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+    padding: 0.28rem 0;
+    font-size: 0.875rem;
+    color: rgba(248, 242, 232, 0.88);
+    line-height: 1.45;
+}
+
+.hero-rules li + li {
+    border-top: 1px solid rgba(245, 224, 178, 0.08);
+}
+
+.hero-rules li::before {
+    content: '◆';
+    font-size: 0.4em;
+    color: var(--cabin-gold-500);
+    flex-shrink: 0;
+    margin-top: 0.15em;
+}
+
+.hero-cta {
+    width: 100%;
+    max-width: 22rem;
+    padding: 1rem 2.5rem;
+    border-radius: var(--cabin-radius-md);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--cabin-ink-950);
+    background: linear-gradient(130deg, var(--cabin-gold-500) 0%, #d4942c 100%);
+    box-shadow:
+        0 4px 20px rgba(190, 125, 47, 0.45),
+        0 1px 4px rgba(22, 14, 8, 0.35),
+        inset 0 1px 0 rgba(255, 240, 200, 0.35);
+    transition: transform var(--cabin-fast), box-shadow var(--cabin-fast), filter var(--cabin-fast);
+}
+
+.hero-cta:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 30px rgba(190, 125, 47, 0.55),
+        0 2px 6px rgba(22, 14, 8, 0.35),
+        inset 0 1px 0 rgba(255, 240, 200, 0.35);
+}
+
+.hero-cta:active {
+    transform: translateY(1px);
+    box-shadow:
+        0 2px 10px rgba(190, 125, 47, 0.4),
+        inset 0 1px 0 rgba(255, 240, 200, 0.25);
+}
+
+@media (max-width: 480px) {
+    .hero-root {
+        padding-bottom: 6rem;
+    }
+
+    .hero-rules {
+        padding: 0.75rem 1rem;
+    }
+}
+
 #blazor-error-ui {
     color-scheme: light only;
     background: lightyellow;
