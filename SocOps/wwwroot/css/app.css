@@ -377,6 +377,119 @@ button:disabled {
     }
 }
 
+/* ─── Landing / Start Screen (editorial variation 2) ────────────── */
+
+.landing-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.landing-ambient {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 72% 50% at 50% 0%, rgba(245, 224, 178, 0.6), transparent),
+        radial-gradient(ellipse 55% 42% at 82% 88%, rgba(47, 91, 66, 0.09), transparent);
+    z-index: 0;
+}
+
+.landing-frame {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 22rem;
+}
+
+.landing-kicker {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.landing-hero {
+    margin-bottom: 2.25rem;
+}
+
+.landing-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 12vw, 5.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.06em;
+    color: var(--cabin-ink-950);
+    margin: 0 0 0.9rem;
+}
+
+.landing-title-line {
+    display: block;
+}
+
+.landing-ornament {
+    width: 2.75rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cabin-gold-500), transparent);
+    margin: 0 auto 0.9rem;
+    border-radius: 1px;
+}
+
+.landing-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cabin-ink-500);
+    margin: 0;
+}
+
+.landing-card {
+    text-align: left;
+}
+
+.landing-card-heading {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.landing-cta {
+    box-shadow: 0 4px 16px rgba(47, 91, 66, 0.26);
+    transition: transform var(--cabin-fast), filter var(--cabin-fast), box-shadow var(--cabin-fast);
+}
+
+.landing-cta:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+    box-shadow: 0 7px 22px rgba(47, 91, 66, 0.35);
+}
+
+.landing-cta:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(47, 91, 66, 0.2);
+}
+
+/* Staggered entrance sequence */
+.cabin-reveal-1 {
+    animation: cabin-fade-up var(--cabin-enter) both;
+    animation-delay: 0.05s;
+}
+
+.cabin-reveal-2 {
+    animation: cabin-fade-up var(--cabin-enter) both;
+    animation-delay: 0.2s;
+}
+
+.cabin-reveal-3 {
+    animation: cabin-fade-up var(--cabin-enter) both;
+    animation-delay: 0.36s;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
