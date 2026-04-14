@@ -6,29 +6,36 @@ public static class Questions
 
     public static readonly List<string> QuestionsList = new()
     {
-        "has said 'it works on my machine' this month",
-        "has more than 20 browser tabs open right now",
-        "has debugged with Console.WriteLine or print",
-        "has renamed a variable to make a bug disappear",
-        "has merged code on a Friday and felt brave",
-        "uses dark mode in at least one dev tool",
-        "has copied from Stack Overflow today",
-        "has reopened a ticket they thought was done",
-        "has a keyboard shortcut they evangelize",
-        "has written TODO: fix later and meant it",
-        "has broken production (or staging) at least once",
-        "has spent 30+ minutes on a missing semicolon or bracket",
-        "has blamed caching before checking the code",
-        "has celebrated removing more code than they added",
-        "has used 'final_final_v2' in a file name",
-        "has explained a bug with 'race condition maybe'",
-        "has asked 'did you clear cache?' in chat",
-        "has rebased and immediately doubted everything",
-        "has used rubber duck debugging",
-        "has fixed one bug and revealed two more",
-        "has a favorite linter rule",
-        "has been saved by git reflog or stash",
-        "has pushed a commit with a typo in the message",
-        "has read logs like tea leaves"
+        // Languages & Frameworks
+        "wrote code in Python this week",
+        "prefers tabs over spaces",
+        "has a favorite VS Code theme",
+        "uses vim keybindings",
+        "knows what COBOL is",
+        "has contributed to open source",
+
+        // Dev Culture
+        "fixes bugs with print statements",
+        "has rubber duck debugged",
+        "writes tests BEFORE code",
+        "has stayed up coding past 2am",
+        "has a side project graveyard",
+        "reads tech blogs weekly",
+
+        // Tools & Setup
+        "uses a mechanical keyboard",
+        "has 10+ browser tabs open now",
+        "customizes their terminal",
+        "has dotfiles on GitHub",
+        "uses dark mode everywhere",
+        "has a standing desk",
+
+        // Fun & Quirks
+        "knows the konami code",
+        "has a favorite algorithm",
+        "can explain recursion",
+        "has worn a tech conference shirt",
+        "has strong opinions on fonts",
+        "still remembers their first bug"
     };
 }
